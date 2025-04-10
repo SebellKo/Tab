@@ -14,14 +14,18 @@ window.addEventListener('load', () => {
   };
 
   const handleClick = async (event) => {
-    const anchorEl = event.target.closest('a');
+    try {
+      const anchorEl = event.target.closest('a');
 
-    if (anchorEl && anchorEl.href && !anchorEl.href.endsWith('#')) {
-      event.preventDefault();
-      event.stopImmediatePropagation();
+      if (anchorEl && anchorEl.href && !anchorEl.href.endsWith('#')) {
+        event.preventDefault();
+        event.stopImmediatePropagation();
 
-      const option = await getOption();
-      handleOpenPage(anchorEl.href, option);
+        const option = await getOption();
+        handleOpenPage(anchorEl.href, option);
+      }
+    } catch (error) {
+      console.log(error);
     }
   };
 
