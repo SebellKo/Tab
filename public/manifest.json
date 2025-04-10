@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "TabBy",
+  "name": "TicTab",
   "description": "On a new page, current or in a new tab",
   "version": "1.0",
   "content_scripts": [
