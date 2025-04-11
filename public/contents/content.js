@@ -6,10 +6,14 @@ window.addEventListener('load', () => {
   };
 
   const getOption = async () => {
-    return new Promise((resolve) => {
-      chrome.storage.local.get(['targetOption'], (result) => {
-        resolve(result.targetOption);
-      });
+    return new Promise((resolve, reject) => {
+      try {
+        chrome.storage.local.get(['targetOption'], (result) => {
+          resolve(result.targetOption);
+        });
+      } catch (error) {
+        reject(error);
+      }
     });
   };
 
