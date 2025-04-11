@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "TicTab",
-  "description": "On a new page, current or in a new tab",
+  "description": "Every site, your rules. Open in a new tab or stay — with just one click on TicTab.",
   "version": "1.0",
   "icons": {
     "16": "assets/icons/icon-16.png",
